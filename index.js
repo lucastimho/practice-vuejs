@@ -14,6 +14,11 @@ var app4 = new Vue({
   data: {
     todos: [{ text: "Learn JavaScript" }, { text: "Learn Vue" }, { text: "Build something awesome" }],
   },
+  methods: {
+    reverseList: function () {
+      this.todos = this.todos.reverse();
+    },
+  },
 });
 
 var app5 = new Vue({
