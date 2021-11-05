@@ -5,7 +5,16 @@ var app = new Vue({
   data: function () {
     return {
       message: "Hello from JavaScript!",
+      showInfo: false,
+      fruits: ["apple", "banana", "fig"],
+      newFruit: "",
     };
+  },
+  methods: {
+    addNewFruit: function () {
+      this.fruits.push(this.newFruit);
+      this.newFruit = "";
+    },
   },
 });
 
@@ -39,3 +48,5 @@ var app6 = new Vue({
     message: "Hello Vue!",
   },
 });
+
+var fruit = new Vue({});

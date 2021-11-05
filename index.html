@@ -8,8 +8,21 @@
   </head>
   <body>
     <h1>Hello from HTML!</h1>
+    <style>
+      .disabled {
+        color: lightgrey;
+        transition: color 1s ease;
+      }
+    </style>
     <div id="app">
       {{ message }}
+      <button v-on:click="showInfo = !showInfo">Toggle</button>
+      <p v-bind:class="{ disabled: showInfo }"> Extra Info!</p>
+      <div v-for="fruit in fruits">
+        <p>{{ fruit }}</p>
+      </div>
+      <input type="text" v-model="newFruit" />
+      <button v-on:click="addNewFruit()">Add a fruit</button>
     </div>
     <div id="app-4">
       <ol>
