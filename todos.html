@@ -11,13 +11,11 @@
     <h1>Hello from HTML!</h1>
     <div id="app">
       {{ message }}
-      <button v-on:click="loadTodos()">Load Todos</button>
-      <div v-for="todo for todos">
-        <ol>
-          <li>
-            {{ todos }}
-          </li>
-        </ol>
+      <input type="text" v-model="title" />
+      <button v-on:click="createTodos()">Create Todos</button>
+      <div v-for="todo in todos">
+        <h4>{{ todo.title }}</h4>
+        <p>Completed: {{ todo.completed }}</p>
       </div>
     </div>
   </body>
